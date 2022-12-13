@@ -4,18 +4,28 @@
 }
 
 body {
-    margin: 0;
-    background-color: black;
+
+    /* Font */
     font-family: 'minecraftia', serif;
-}
-
-#background {
-    background-image: url('images/backgrounds/winter_background01.png');
+    color: white;
+    /* Background */
+    background-image: url(./images/backgrounds/winter_background01.png);
     background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: cover;
     background-attachment: fixed;
-    height: 100vh; width: 100vw;
-    filter: blur(1.5px);
+    background-size: cover;
+    background-position: bottom;
+    /* Grid (good luck 😔) */
+    align-items: center;
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
 }
 
+div#content {
+    border-radius: 10px;
+    grid-column: 2;
+    text-align: center;
+    height: 500px;
+    backdrop-filter: url(filters.svg#filter) blur(16px) brightness(.5);
+    /* Grid (good luck 😔) */
+    display: grid;
+}
