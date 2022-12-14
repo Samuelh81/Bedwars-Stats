@@ -22,22 +22,17 @@ async function updateData() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 }
 //other functions
 function getApiLink(uuid) {
     var apiKey = apikey.keys[0].key;
     return "https://api.hypixel.net/player?key="+apiKey+"&uuid="+uuid;
 }
-document.getElementById("button").addEventListener('click', event => {updateData();});
+
+function cycleWallpaper() {
+
+document.body.style.backgroundImage = "url(./images/backgrounds/default_background03.png)";
+}
+
+document.getElementById("button").addEventListener('click', event => {cycleWallpaper();});
 

@@ -1,11 +1,13 @@
+:root {
+    --variable: value;
+}
+
 @font-face {
     font-family: 'minecraftia';
     src: url('minecraftia.woff');
 }
 
 body {
-
-    /* Font */
     font-family: 'minecraftia', serif;
     color: white;
     /* Background */
@@ -14,18 +16,92 @@ body {
     background-attachment: fixed;
     background-size: cover;
     background-position: bottom;
-    /* Grid (good luck 😔) */
-    align-items: center;
-    display: grid;
-    grid-template-columns: 15% 70% 15%;
+    padding-left: 15%;
+    padding-right: 15%;
 }
 
-div#content {
+.content {
     border-radius: 10px;
-    grid-column: 2;
     text-align: center;
-    height: 500px;
+    align-items: center;
+    height: fit-content;
     backdrop-filter: url(filters.svg#filter) blur(16px) brightness(.5);
-    /* Grid (good luck 😔) */
+    padding-left: 7.5%;
+    padding-right: 7.5%;
+    padding-bottom: 2.5%;
+    /* Grid (good luck 😔, you need it) */
     display: grid;
+    grid-template-columns: 10% 30% 60%;
+    grid-template-rows: 75px 400px 400px 20px;
+}
+
+#pagetitle {
+    color: red;
+    grid-column-start: 1;
+    grid-column-end: 6;
+}
+
+#bodyrender {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+#statstitle {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+#statsbody {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+#morestatstitle {
+    grid-column-start: 2;
+    grid-column-end: 6;
+    grid-row: 3;
+}
+
+#morestatsbody {
+    grid-column-start: 2;
+    grid-column-end: 6;
+    grid-row: 3;
+}
+
+
+
+/* Buttons */
+#button {
+    font-family: 'minecraftia', serif;
+    font-size: 13px;
+    border: 0;
+    height: 60px;
+    width: 180px;
+    scale: .75;
+    background-image: url(./images/elements/button0.png);
+    justify-self: center;
+    grid-column: 3;
+    grid-row: 2;
+}
+
+#button:active {
+    background-image: url(./images/elements/button1.png);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 13px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgb(40, 40, 40);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(206, 22, 22);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(196, 12, 12);
 }
