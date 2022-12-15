@@ -32,7 +32,7 @@ body {
     /* Grid (good luck 😔, you need it) */
     display: grid;
     grid-template-columns: 10% 30% 60%;
-    grid-template-rows: 75px 400px 400px 20px;
+    grid-template-rows: 75px 400px 400px 40px;
 }
 
 #pagetitle {
@@ -46,28 +46,23 @@ body {
     grid-row: 2;
 }
 
-#statstitle {
+#statsmenu {
     grid-column: 3;
     grid-row: 2;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 50%;
 }
 
-#statsbody {
-    grid-column: 3;
-    grid-row: 2;
-}
 
-#morestatstitle {
-    grid-column-start: 2;
+#morestatsmenu {
+    grid-column-start: 1;
     grid-column-end: 6;
     grid-row: 3;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 50%;
 }
-
-#morestatsbody {
-    grid-column-start: 2;
-    grid-column-end: 6;
-    grid-row: 3;
-}
-
 
 
 /* Buttons */
@@ -77,11 +72,15 @@ body {
     border: 0;
     height: 60px;
     width: 180px;
-    scale: .75;
+    scale: .5;
     background-image: url(./images/elements/button0.png);
     justify-self: center;
-    grid-column: 3;
-    grid-row: 2;
+    grid-column: 1;
+    grid-row: 4;
+}
+
+.materialicon {
+    scale: .1;
 }
 
 #button:active {
