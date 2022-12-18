@@ -31,12 +31,13 @@ body {
     padding-bottom: 2.5%;
     /* Grid (good luck 😔, you need it) */
     display: grid;
+    place-items: center;
     grid-template-columns: 10% 30% 60%;
     grid-template-rows: 75px 400px 400px 40px;
 }
 
 #pagetitle {
-    color: red;
+    color: gray;
     grid-column-start: 1;
     grid-column-end: 6;
 }
@@ -51,9 +52,14 @@ body {
     grid-row: 2;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 50% 50%;
+    grid-template-rows: 60px 40px 40px 40px;
 }
 
+#statstitle {
+    font-size: 40px;
+    margin: 0;
+    color: gray;
+}
 
 #morestatsmenu {
     grid-column-start: 1;
@@ -63,6 +69,16 @@ body {
     grid-template-columns: 100%;
     grid-template-rows: 50% 50%;
 }
+
+/* Data Elements */
+
+
+
+
+
+
+
+
 
 
 /* Buttons */
